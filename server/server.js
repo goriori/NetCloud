@@ -7,7 +7,9 @@ const start = async () => {
   try {
     const app = express();
     app.listen(process.env.PORT, () => {
+      console.log(chalk.green("==========SUCCESS==============="));
       console.log("server started...");
+      console.log(chalk.green("==========SUCCESS==============="));
     });
   } catch (error) {
     console.log(chalk.red("===============ERRR================="));
@@ -15,4 +17,4 @@ const start = async () => {
     console.log(chalk.red("===============ERRR================="));
   }
 };
-start()
+start();
