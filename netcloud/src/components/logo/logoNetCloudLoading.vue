@@ -1,5 +1,5 @@
 <template>
-  <div class="loading flex flex-center" >
+  <div class="loading flex flex-center">
     <q-img src="../../assets/signalLeft.png" width="8%" class="q-mr-md" />
     <svg
       width="110"
@@ -32,16 +32,16 @@
     </svg>
     <q-img src="../../assets/signalRight.png" width="8%" class="q-ml-md" />
     <!-- <q-spinner-ball color="blue" size="50px" class="q-mx-xl" /> -->
-    <h2>NetCloud</h2>
+    
+      <h2>NetCloud</h2>
+    
   </div>
 </template>
 <script>
 export default {
-  name:'LoadingLogo',
-  data(){
-    return {
-
-    }
-  }
-}
+  name: "LoadingLogo",
+  data() {
+    return {};
+  },
+};
 </script>
