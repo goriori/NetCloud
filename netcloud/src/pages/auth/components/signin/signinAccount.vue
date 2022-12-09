@@ -7,9 +7,8 @@
           rounded
           outlined
           v-model="form.login"
-          label="Login"
+          placeholder="login"
           color="primary"
-          label-color="grey-1"
           input-class="text-white text-center  "
           bg-color="primary"
           input-style=""
@@ -21,9 +20,8 @@
           rounded
           outlined
           v-model="form.password"
-          label="Password"
+          placeholder="password"
           color="primary"
-          label-color="grey-1"
           input-class="text-white text-center "
           type="password"
           bg-color="primary"
@@ -36,6 +34,7 @@
         color="primary"
         label="Sign In"
         class="text-center"
+        :loading="false"
       />
     </div>
     <descriptionHelper />
