@@ -30,7 +30,10 @@ const startServer = async () => {
             })
         })
     } catch (error) {
+        console.log(chalk.green('########  ERRORR Auth Service  #######'))
         console.log(error)
+        console.log(chalk.green('########  ERRORR Auth Service  #######'))
+
     }
 }
 startServer()

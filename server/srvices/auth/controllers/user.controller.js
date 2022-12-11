@@ -2,6 +2,7 @@ import chalk from 'chalk'
 import User from "../settings/db/models/User.js";
 import generateLogin from './handlers/generateLogin.js';
 import sendMail from './handlers/sendMail.js';
+
 class UserController {
 
     async singIn(req, res) {

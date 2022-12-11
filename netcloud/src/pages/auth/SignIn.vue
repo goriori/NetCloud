@@ -71,6 +71,10 @@ export default {
     async authStatus() {
       if ((await this.$store.getters.getStatusAuthorize.err) === true) {
         (this.errors.unAuth = true),
+        this.validForm.empty = false,
+        this.validForm.success = false,
+
+
           setTimeout(() => {
             this.errors.unAuth = false;
             this.$store.commit("clearStatusAuthorizeError");

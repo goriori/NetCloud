@@ -8,7 +8,7 @@
           outlined
           v-model="form.phone"
           placeholder="you`r phone"
-          color="primary"
+          color="green"
           input-class="text-white text-center  "
           bg-color="primary"
           input-style=""
@@ -22,7 +22,7 @@
           outlined
           v-model="form.password"
           placeholder="you`r password"
-          color="primary"
+          color="green"
           input-class="text-white text-center "
           type="password"
           bg-color="primary"
@@ -35,7 +35,7 @@
           outlined
           v-model="form.repeatPassword"
           placeholder="repeat you`r password"
-          color="primary"
+          color="green"
           input-class="text-white text-center "
           type="password"
           bg-color="primary"
@@ -48,7 +48,7 @@
           outlined
           v-model="form.email"
           placeholder="you`r email"
-          color="primary"
+          color="green"
           input-class="text-white text-center "
           type="email"
           bg-color="primary"
