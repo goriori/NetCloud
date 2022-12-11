@@ -18,7 +18,7 @@ const start = async () => {
       authServer() 
       
 
-    });
+    }); 
 
 
   } catch (error) {

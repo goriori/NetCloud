@@ -23,6 +23,9 @@ export default {
             state.authorize.err = true
             
         },
+        clearStatusAuthorizeError(state){
+            state.authorize.err = false
+        }
         
     },
     actions: {
@@ -36,6 +39,7 @@ export default {
                         password: form.password
                     }
                 })
+                console.log(data)
                 ctx.commit('updateStatusAuthorizeSuccess')
             } catch (error) {
                 if (error.response.status === 404) {
