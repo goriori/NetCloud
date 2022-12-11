@@ -5,7 +5,7 @@
       enter-active-class="animated fadeInDown"
       leave-active-class="animated fadeOutUp"
     >
-      <ErrorAuth v-if="errors.unAuth" />
+      <ErrorAuth v-if="errors.unAuth.err" />
     </transition>
     <transition
       appear
@@ -33,19 +33,14 @@ export default {
     return {
       loading: true,
       errors: {
-        unAuth: false,
+        unAuth: this.$store.getters.getStatusAuthorize
       },
     };
   },
+  
   mounted() {
     setTimeout(() => {
       this.loading = false;
-      setTimeout(() => {
-        this.errors.unAuth = true;
-        setTimeout(() => {
-          this.errors.unAuth = false;
-        }, 3000);
-      }, 3000);
     }, 3000);
   },
   components: { logoNetCloudLoading, signinAccount, ErrorAuth },

@@ -1,10 +1,12 @@
 import express from "express";
 import chalk from "chalk";
 import dotenv from "dotenv";
+import cors from 'cors'
 dotenv.config();
 const start = async () => {
   try {
     const app = express();
+    app.use(cors())
     app.listen(process.env.MAIN_PORT, () => {
       // main server
       console.log(chalk.green("==========SUCCESS==============="));
@@ -13,7 +15,7 @@ const start = async () => {
       // services
       console.log(chalk.blue('======================Services Servers======================'))
       const authServer = ()=>   import('./srvices/auth/main.js')
-      authServer()
+      authServer() 
       
 
     });

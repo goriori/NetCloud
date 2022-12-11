@@ -19,6 +19,7 @@ const User = sequelize.define('Users', {
     },
     phone:{
         type:DataTypes.STRING,
+        unique:true,
         allowNull:false
     },
     password:{
@@ -26,8 +27,14 @@ const User = sequelize.define('Users', {
         allowNull:false
     },
     email:{
-        type:DataTypes.STRING,
+        type:DataTypes.STRING, 
+        unique:true,
         allowNull:false
+    },
+    login:{
+        type:DataTypes.STRING,
+        allowNull:false,
+        defaultValue:'Не установлено'
     }
 })
 

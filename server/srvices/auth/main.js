@@ -3,8 +3,15 @@ import express from 'express'
 import sequelize from './settings/db/db.js'
 import User from './settings/db/models/User.js'
 import auth from './settings/router.js'
+import cors from 'cors'
+
+
 
 const authApp = express()
+authApp.use(cors())
+authApp.use(express.json())
+authApp.use('/api/users', auth)
+
 const startServer = async () => {
     try {
         sequelize.sync().then(() => {
@@ -14,8 +21,8 @@ const startServer = async () => {
 
         }).then(() => {
             
-            authApp.use(express.json())
-            authApp.use('/api/users', auth)
+           
+            
             authApp.listen(process.env.AUTH_PORT, () => {
                 console.log(chalk.green('-------------Started---------------'))
                 console.log(`server Auth started on port ${process.env.AUTH_PORT}`)

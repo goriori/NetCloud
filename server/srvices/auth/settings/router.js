@@ -9,6 +9,10 @@ auth.post('/signup',
     check('email').isEmail().notEmpty(),
     userController.signUp
 )
+auth.post('/signin',
+    check('login', 'The login field cannot be empty').notEmpty(),
+    check('password', 'The password field cannot be empty').notEmpty(),
+    userController.singIn)
 
 
 export default auth

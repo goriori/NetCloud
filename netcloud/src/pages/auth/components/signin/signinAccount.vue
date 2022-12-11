@@ -1,5 +1,5 @@
 <template>
-  <div class="container text-center" >
+  <div class="container text-center">
     <logoNetCloudVue />
     <div class="form_container" style="width: 300px; margin: 0 auto">
       <div class="q-mb-md col-3">
@@ -35,6 +35,7 @@
         label="Sign In"
         class="text-center"
         :loading="false"
+        @click="signIn"
       />
     </div>
     <descriptionHelper />
@@ -53,6 +54,16 @@ export default {
         password: null,
       },
     };
+  },
+  methods: {
+    async signIn() {
+      if (this.form.login === "" || this.form.password === "") {
+        return console.log("Поле логин или пароль обязательные");
+      }else{
+        this.$store.dispatch("authorization", this.form);
+
+      }
+    },
   },
   components: { logoNetCloudVue, descriptionHelper },
 };
