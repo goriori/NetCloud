@@ -6,8 +6,13 @@ export default {
         authorize: {
             err: null,
             notfound: null,
+            errorNetwork:null,
             success: null
+        },
+        signup:{
+            status:null
         }
+
 
     },
     getters: {
@@ -25,6 +30,12 @@ export default {
         },
         clearStatusAuthorizeError(state){
             state.authorize.err = false
+        },
+        errorNetwork(state){
+            state.authorize.errorNetwork = true
+        },
+        updateStatusSignUp(state){
+            state.signup.status = 200
         }
         
     },
@@ -42,11 +53,34 @@ export default {
                 console.log(data)
                 ctx.commit('updateStatusAuthorizeSuccess')
             } catch (error) {
+                if(error.message == 'Network Error'){
+                    return ctx.commit('errorNetwork')
+                }
                 if (error.response.status === 404) {
-                    ctx.commit('updateStatusAuthorizeError')
+                  return  ctx.commit('updateStatusAuthorizeError')
 
                 }
-                console.log(error.response)
+                console.log(error.message)
+            }
+        },
+        async signup(ctx, form){
+            try {
+                const data = await axios({
+                    method: 'post',
+                    url: `${urlBASE}/signup`,
+                    data: {
+                        phone: form.phone,
+                        password: form.password,
+                        email:form.email
+                    }
+                })
+                console.log(data)
+                ctx.commit('updateStatusSignUp')
+            } catch (error) {
+                if(error.message == 'Network Error'){
+                    return ctx.commit('errorNetwork')
+                }
+                console.log(error.message)
             }
         }
     },

@@ -62,6 +62,7 @@
         label="Sign Up"
         class="text-center"
         :loading="false"
+        @click="signup()"
       />
     </div>
     <descriptionHelper />
@@ -76,12 +77,28 @@ export default {
   data() {
     return {
       form: {
-        phone: null,
-        password: null,
-        repeatPassword:null,
-        email:null
+        phone: '',
+        password: '',
+        repeatPassword:'',
+        email:''
       },
     };
+  },
+  methods:{
+    async signup(){
+      if (this.form.phone === "" || this.form.password === "" || this.form.repeatPassword === '' || this.form.email === '') {
+        console.log("Заполните все поля");
+        return this.$emit("emptyfield");
+      }else if(this.form.password != this.form.repeatPassword){
+        console.log('Пароли не совпадают')
+      } 
+      else {
+        await this.$store.dispatch("signup", this.form);
+        this.$emit("signup");
+        this.form.login =''
+         this.form.password = ''
+      }
+    }
   },
   components: { logoNetCloudVue, descriptionHelper },
 };

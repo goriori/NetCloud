@@ -4,7 +4,7 @@ import { check } from 'express-validator'
 const auth = new Router()
 
 auth.post('/signup',
-    check('phone').isMobilePhone().notEmpty(),
+    check('phone').isMobilePhone(),
     check('password').notEmpty(),
     check('email').isEmail().notEmpty(),
     userController.signUp

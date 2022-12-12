@@ -12,6 +12,13 @@
       enter-active-class="animated fadeInDown"
       leave-active-class="animated fadeOutUp"
     >
+      <ErrorNetwork v-if="errors.errorNetwork" />
+    </transition>
+    <transition
+      appear
+      enter-active-class="animated fadeInDown"
+      leave-active-class="animated fadeOutUp"
+    >
       <SuccessAuth v-if="validForm.success" />
     </transition>
     <transition
@@ -45,15 +52,17 @@
 <script>
 import logoNetCloudLoading from "src/components/logo/logoNetCloudLoading.vue";
 import signinAccount from "./components/signin/signinAccount.vue";
-import ErrorAuth from "./components/message/signin/ErrorAuth.vue";
-import SuccessAuth from "./components/message/signin/SuccessAuth.vue";
-import EmptyField from "./components/message/signin/EmptyField.vue";
+import ErrorAuth from "./components/message/ErrorAuth.vue";
+import SuccessAuth from "./components/message/SuccessAuth.vue";
+import EmptyField from "./components/message/EmptyField.vue";
+import ErrorNetwork from "./components/message/ErrorNetwork.vue"
 export default {
   data() {
     return {
       loading: true,
       errors: {
         unAuth: false,
+        errorNetwork:false,
       },
       validForm: {
         success: false,
@@ -86,6 +95,12 @@ export default {
           setTimeout(() => {
             this.validForm.success = false;
           }, 2000);
+      }else if(await this.$store.getters.getStatusAuthorize.errorNetwork == true){
+        this.errors.errorNetwork = true
+        setTimeout(() => {
+        this.errors.errorNetwork = false
+
+        }, 3000);
       }
     },
     async EmptyField() {
@@ -101,6 +116,7 @@ export default {
     ErrorAuth,
     SuccessAuth,
     EmptyField,
+    ErrorNetwork
   },
 };
 </script>
