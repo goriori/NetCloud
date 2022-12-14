@@ -1,5 +1,5 @@
 <template>
-  <router-view />
+  <router-view class="tempalte seria bg-black " />
 </template>
 
 <script>
@@ -9,3 +9,14 @@ export default defineComponent({
   name: 'App'
 })
 </script>
+
+<style lang="scss">
+  a{
+    text-decoration: none;
+  }
+  .tempalte {
+    // padding-top: 50px;
+    // padding-left: 100px;
+    // padding-right: 100px;
+  }
+</style>

@@ -1,5 +1,5 @@
 <template>
-  <q-page class="bg-black text-white flex flex-center">
+  <q-page class="text-white flex flex-center">
     <transition
       appear
       enter-active-class="animated fadeInDown"

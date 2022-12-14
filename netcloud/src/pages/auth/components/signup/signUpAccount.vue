@@ -70,7 +70,7 @@
 </template>
   
   <script>
-import logoNetCloudVue from "src/components/logo/logoNetCloud.vue";
+import logoNetCloudVue from "src/components/logo/logoNetCloudArrow.vue";
 import descriptionHelper from "src/pages/auth/components/signup/elements/descriptionHelper.vue";
 export default {
   name: "SignIn",

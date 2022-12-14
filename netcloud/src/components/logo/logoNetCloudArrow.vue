@@ -1,5 +1,8 @@
 <template>
-    <svg
+  <div class="logo">
+    <div class="item-group flex justify-center ">
+      <q-img src="../../assets/signalLeft.png" width="13%" class="q-mr-md" />
+      <svg
         class=""
         width="110"
         height="73"
@@ -29,10 +32,18 @@
           />
         </defs>
       </svg>
+      <q-img src="../../assets/signalRight.png" width="13%" class="q-ml-md" />
+    </div>
+    
+    <h2 class="text-center">NetCloud</h2>
+  </div>
 </template>
 
 <script>
 export default {
-    name:"LogoNetCloud"
-}
+  name: "LogoNetCloud",
+  data() {
+    return {};
+  },
+};
 </script>

@@ -22,7 +22,7 @@
           v-model="form.password"
           placeholder="password"
           color="green"
-          input-class="text-white text-center "
+          input-class="text-white text-center  "
           type="password"
           bg-color="primary"
           style="max-width: 300px"
@@ -43,7 +43,7 @@
 </template>
 
 <script>
-import logoNetCloudVue from "src/components/logo/logoNetCloud.vue";
+import logoNetCloudVue from "src/components/logo/logoNetCloudArrow.vue";
 import descriptionHelper from "src/pages/auth/components/signin/elements/descriptionHelper.vue";
 export default {
   name: "SignIn",
