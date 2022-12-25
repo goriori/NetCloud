@@ -9,6 +9,13 @@ const routes = [
       {path:'/about', component:()=> import('src/pages/about/AboutNetCloud.vue')}
     ]
   },
+  {
+    path:'/user',
+    component:()=> import('layouts/UserLayout.vue'),
+    children:[
+      {path:'profile', component:()=> import('src/pages/user/user.vue')}
+    ]
+  },
 
   // Always leave this as last one,
   // but you can also remove it
