@@ -63,6 +63,7 @@ export default {
   align-content: center;
   text-align: center;
   max-width: 300px;
+
   margin-left: 15rem;
 }
 

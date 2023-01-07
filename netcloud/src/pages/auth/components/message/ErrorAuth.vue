@@ -1,7 +1,6 @@
 <template>
   <q-banner inline-actions class="text-white bg-red absolute-top text-center" :dabse="true" :rounded="true">
-    При авторизации произошла ошибка. Неверный логин или пароль. Попробуйте снова.
-    
+    An error occurred during authorization. Invalid username or password. Try again.
   </q-banner>
 </template>
 

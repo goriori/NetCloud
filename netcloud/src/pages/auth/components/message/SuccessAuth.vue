@@ -5,7 +5,7 @@
     :dabse="true"
     :rounded="true"
   >
-    Успешная авторизация
+    Successful authorization
   </q-banner>
 </template>
   

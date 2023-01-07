@@ -21,7 +21,7 @@ class UserController {
             }
             res.json({ auth: 'OK', message: `Welcom to NetCloud ` })
         } catch (error) {
-            res.status(500).json('Errorr')
+            res.status(500).json('Erorr')
             console.log(chalk.red('#####################    ERORR  AuthServer   ###############################'))
             console.log(error)
             console.log(chalk.red('#####################    ERORR  AuthServer   ###############################'))

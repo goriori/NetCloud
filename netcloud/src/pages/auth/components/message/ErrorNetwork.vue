@@ -1,7 +1,7 @@
 <template>
   <q-banner class="bg-red absolute-top text-center">
     <q-icon name="signal_wifi_off" color="primary" />
-    Ошибка подключения к серверу. Попробуйте войти позже.
+    Server connection error. Try logging in later.
   </q-banner>
 </template>
 

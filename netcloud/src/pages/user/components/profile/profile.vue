@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container ">
     <UserAvatar class="avatar"/>
     <NavigateProfile class="q-mt-md navigation" />
   </div>
@@ -17,6 +17,7 @@ export default {
 <style lang="scss" scoped>
 .container {
   max-width: 540px;
+  margin:0 auto;
 }
 .navigation{
   margin-left: 280px;

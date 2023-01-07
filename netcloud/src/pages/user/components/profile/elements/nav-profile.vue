@@ -4,6 +4,8 @@
             <q-btn flat style="color: #3CA7DB" label="Works" class="q-mt-xs q-mb-xs" />
             <br/>
             <q-btn flat style="color: #3CA7DB" label="About" class="q-mt-xs q-mb-xs"/>
+            <br/>
+            <q-btn flat style="color: #3CA7DB" label="Exit" class="q-mt-xs q-mb-xs" @click="exit"/>
         </q-card>
     </div>
 </template>
@@ -14,6 +16,11 @@ export default {
     data(){
         return{
 
+        }
+    },
+    methods:{
+        exit(){
+            this.$router.push('/')
         }
     }
 }

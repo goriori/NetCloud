@@ -55,14 +55,14 @@ import signinAccount from "./components/signin/signinAccount.vue";
 import ErrorAuth from "./components/message/ErrorAuth.vue";
 import SuccessAuth from "./components/message/SuccessAuth.vue";
 import EmptyField from "./components/message/EmptyField.vue";
-import ErrorNetwork from "./components/message/ErrorNetwork.vue"
+import ErrorNetwork from "./components/message/ErrorNetwork.vue";
 export default {
   data() {
     return {
       loading: true,
       errors: {
         unAuth: false,
-        errorNetwork:false,
+        errorNetwork: false,
       },
       validForm: {
         success: false,
@@ -77,13 +77,12 @@ export default {
     }, 3000);
   },
   methods: {
+    // SignIn =======================
     async authStatus() {
       if ((await this.$store.getters.getStatusAuthorize.err) === true) {
         (this.errors.unAuth = true),
-        this.validForm.empty = false,
-        this.validForm.success = false,
-
-
+          (this.validForm.empty = false),
+          (this.validForm.success = false),
           setTimeout(() => {
             this.errors.unAuth = false;
             this.$store.commit("clearStatusAuthorizeError");
@@ -94,15 +93,20 @@ export default {
         (this.validForm.success = true),
           setTimeout(() => {
             this.validForm.success = false;
+            setTimeout(() => {
+              this.$router.push("/user/profile");
+            }, 2000);
           }, 2000);
-      }else if(await this.$store.getters.getStatusAuthorize.errorNetwork == true){
-        this.errors.errorNetwork = true
+      } else if (
+        (await this.$store.getters.getStatusAuthorize.errorNetwork) == true
+      ) {
+        this.errors.errorNetwork = true;
         setTimeout(() => {
-        this.errors.errorNetwork = false
-
+          this.errors.errorNetwork = false;
         }, 3000);
       }
     },
+    // Empty Fields =========================
     async EmptyField() {
       (this.validForm.empty = true),
         setTimeout(() => {
@@ -116,7 +120,7 @@ export default {
     ErrorAuth,
     SuccessAuth,
     EmptyField,
-    ErrorNetwork
+    ErrorNetwork,
   },
 };
 </script>

@@ -5,7 +5,7 @@
     :dabse="true"
     :rounded="true"
   >
-    Пожалуйста, заполните все поля...
+  Please fill in all the fields...
   </q-banner>
 </template>
   
