@@ -1,17 +1,25 @@
 <template>
-  <div>Profile
-
-    <UserAvatar/>
+  <div class="container">
+    <UserAvatar class="avatar"/>
+    <NavigateProfile class="q-mt-md navigation" />
   </div>
 </template>
 
 <script>
-import UserAvatar from './elemetns/avatar.vue'
+import UserAvatar from './elements/avatar.vue'
+import NavigateProfile from './elements/nav-profile.vue'
 export default {
     name:'UserProfile',
-    components:{UserAvatar}
+    components:{UserAvatar,NavigateProfile}
 };
 </script>
 
 <style lang="scss" scoped>
+.container {
+  max-width: 540px;
+}
+.navigation{
+  margin-left: 280px;
+}
+
 </style>

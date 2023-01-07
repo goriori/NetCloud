@@ -31,9 +31,9 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-  border: 1px solid white;
+  
   position: relative;
-  max-width: 540px;
+  
 }
 
 .lineAchive {
