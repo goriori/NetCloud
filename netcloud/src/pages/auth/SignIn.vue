@@ -93,9 +93,9 @@ export default {
         (this.validForm.success = true),
           setTimeout(() => {
             this.validForm.success = false;
-            setTimeout(() => {
+            
               this.$router.push("/user/profile");
-            }, 800);
+            
           }, 2000);
       } else if (
         (await this.$store.getters.getStatusAuthorize.errorNetwork) == true

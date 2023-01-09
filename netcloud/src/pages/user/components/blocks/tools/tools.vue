@@ -4,7 +4,7 @@
     <div class="description row">
       <p v-for="desc in descriptions" :key="desc" :class="desc.bgcolor">
         <span class="q-pl-sm q-pr-sm">{{ `${desc.name}` }}</span>
-        <DescriptionTool :description="desc.description"/>
+        <DescriptionTool :description="desc.description" :bgcolor="desc.bgcolor"/>
       </p>
     </div>
   </div>
