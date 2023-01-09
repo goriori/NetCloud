@@ -1,7 +1,7 @@
 <template>
   <div class="text-white  flex  container">
     <div>
-      <LogoNetCloudMain/>
+      <LogoNetCloudMain class="q-mb-xl q-mt-xl"/>
       <div class="blocks flex row">
         <BlockInformations/>
         <BlockTools/>
