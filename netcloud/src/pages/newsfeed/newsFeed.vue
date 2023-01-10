@@ -1,5 +1,7 @@
 <template>
-    <div class="text-white">NewsFeed</div>
+    <div class="text-white container q-pa-md">
+        <p> Title Active</p>
+    </div>
 </template>
 
 
@@ -15,5 +17,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.container {
+    border:1px solid #46b0e4;
+    border-radius: 10px;
 
+}
 </style>

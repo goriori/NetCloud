@@ -5,22 +5,11 @@
         <div class="logo">
           <LogoNetCloudMain />
         </div>
-        <div class="avatar">
-            
-        </div>
+        <div class="avatar"></div>
       </header>
     </div>
-    <div class="content flex">
-      <div class="navigation">
-        <router-link
-          v-for="link in links"
-          :key="link"
-          :to="link.href"
-          class="text-white flex justify-center"
-        >
-          <q-btn class=""> {{ link.name }} </q-btn><br />
-        </router-link>
-      </div>
+    <div class="content flex q-mt-xl">
+      <NavigationMain />
       <q-page-container>
         <q-page padding>
           <router-view />
@@ -32,18 +21,12 @@
     
 <script>
 import LogoNetCloudMain from "src/components/logo/LogoNetCloudMain.vue";
-
+import NavigationMain from "src/components/navigation/navigation.vue";
 export default {
   name: "NewsFeedLayout",
-  components: { LogoNetCloudMain },
+  components: { LogoNetCloudMain, NavigationMain },
   data() {
-    return {
-      links: [
-        { name: "My Profile", href: "user/profile" },
-        { name: "Feed", href: "newsfeed" },
-        { name: "About", href: "about" },
-      ],
-    };
+    return {};
   },
 };
 </script>
@@ -62,13 +45,7 @@ header {
   width: 100%;
 }
 
-.navigation {
-  max-width: 300px;
-  max-height: 500px;
-  width: 300px;
-  border: 1px solid #46b0e4;
-  border-radius: 10px;
-}
+
 </style>
   
   
