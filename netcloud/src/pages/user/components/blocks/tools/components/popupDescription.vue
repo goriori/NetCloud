@@ -1,10 +1,7 @@
 <template>
-    <q-popup-proxy :offset="[10, 10]">
-        <q-banner :class="bgcolor">
-          <template v-slot:avatar>
-            <q-icon name="signal_wifi_off" />
-          </template>
-          {{description}}
+    <q-popup-proxy :offset="[10, 10]" class="shadow-up-24">
+        <q-banner :class="bgcolor"> 
+         <p class="text-white">{{description}}</p> 
         </q-banner>
       </q-popup-proxy>
 </template>
@@ -20,7 +17,7 @@ export default {
       bgcolor:{
         type:String,
         default:'primary'
-      }
+      } 
     },
     data(){
         return {
@@ -34,5 +31,8 @@ export default {
 <style lang="scss" scoped>
 .q-banner {
   max-width: 400px;
+  opacity: 0.9;
 }
+
+
 </style>

@@ -5,16 +5,18 @@
       <p v-for="desc in descriptions" :key="desc" :class="desc.bgcolor">
         <span class="q-pl-sm q-pr-sm">{{ `${desc.name}` }}</span>
         <DescriptionTool :description="desc.description" :bgcolor="desc.bgcolor"/>
+        <SettingTool :bgcolor="desc.bgcolor" />
       </p>
     </div>
   </div>
 </template>
 
 <script>
-import DescriptionTool from "./components/popup.vue";
+import DescriptionTool from "./components/popupDescription.vue";
+import SettingTool from './components/popupEdit.vue'
 export default {
   name: "BlockTools",
-  components: { DescriptionTool },
+  components: { DescriptionTool,SettingTool },
   data() {
     return {
       descriptions: [

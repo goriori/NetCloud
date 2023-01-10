@@ -3,7 +3,7 @@
         <q-card class="navigation__profile q-pt-md q-pb-md">
             <q-btn flat style="color: #3CA7DB" label="Works" class="q-mt-xs q-mb-xs" />
             <br/>
-            <q-btn flat style="color: #3CA7DB" label="About" class="q-mt-xs q-mb-xs"/>
+            <q-btn flat style="color: #3CA7DB" label="About" class="q-mt-xs q-mb-xs" @click="$router.push('/about')"/>
             <br/>
             <q-btn flat style="color: #3CA7DB" label="Exit" class="q-mt-xs q-mb-xs" @click="exit"/>
         </q-card>
