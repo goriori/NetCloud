@@ -8,7 +8,7 @@
         <div class="avatar"></div>
       </header>
     </div>
-    <div class="content flex q-mt-xl">
+    <div class="content flex q-mt-xl ">
       <NavigationMain />
       <q-page-container>
         <q-page padding>

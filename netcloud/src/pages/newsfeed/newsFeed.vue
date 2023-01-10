@@ -1,13 +1,18 @@
 <template>
     <div class="text-white container q-pa-md">
-        <p> Title Active</p>
+        <p> Search</p>
+        <Search class="" />
+        <News />
     </div>
 </template>
 
 
 <script>
+import Search from './components/search/search.vue'
+import News from './components/news/news.vue'
 export default {
     name:"NewsFeed",
+    components:{Search, News},
     data(){
         return {
 
@@ -18,8 +23,9 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-    border:1px solid #46b0e4;
-    border-radius: 10px;
+    max-width: 1000px;
+    width: 1000px;
+    
 
 }
 </style>
