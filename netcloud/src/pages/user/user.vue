@@ -1,13 +1,13 @@
 <template>
   <div class="text-white  flex  container">
     <div>
-      <LogoNetCloudMain class="q-mb-xl q-mt-xl"/>
+      <LogoNetCloudMain class="logo"/>
       <div class="blocks flex row">
         <BlockInformations/>
         <BlockTools/>
       </div>
     </div>
-    <UserProfile />
+    <UserProfile class="profile" />
   </div>
 </template>
 
@@ -25,6 +25,15 @@ export default {
 
 
 <style lang="scss" scoped>
+
+.logo{
+  margin-bottom: 60px;
+  margin-top: 30px;
+}
+
+.profile{
+  margin-top: 100px;
+}
 
 .blocks {
     div {

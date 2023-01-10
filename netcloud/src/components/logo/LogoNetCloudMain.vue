@@ -1,11 +1,11 @@
 <template>
-  <div class="container flex justify-center items-start ">
+  <div class="container flex   ">
     <q-img
       src="../../assets/LogoMain.png"
       spinner-color="white"
       class=""
     />
-    <p class="logoName text-center">NetCloud</p>
+    <p class="logoName flex  justify-center ">NetCloud</p>
   </div>
 </template>
 
@@ -27,6 +27,9 @@ export default {
 }
 
 .logoName {
-    font-size: 30px;
+  margin:0px;
+  font-size: 30px;
+    align-content: center;
+   
 }
 </style>

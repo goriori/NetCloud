@@ -16,6 +16,13 @@ const routes = [
       {path:'profile', component:()=> import('src/pages/user/user.vue')}
     ]
   },
+  {
+    path:'/newsfeed',
+    component:() => import('layouts/NewsFeedLayout.vue'),
+    children:[
+      {path:'', component:()=> import('src/pages/newsfeed/newsFeed.vue')}
+    ]
+  },
 
   // Always leave this as last one,
   // but you can also remove it

@@ -15,8 +15,8 @@
         </q-avatar>
       </div>
     </div>
-    <div class="username q-pa-md q-gutter-md">
-      <q-card class="nickname text-white col-2">
+    <div class="username q-pa-md ">
+      <q-card class="nickname text-white col-6">
         <q-card-section> GorizontOriginal </q-card-section>
       </q-card>
     </div>
